@@ -1,5 +1,7 @@
 @import "./variables.scss";
 @import "./cdn.scss";
+@import "./header.scss";
+@import "./first_ckreen.scss";
 @import "./mixins/card.scss";
 
 html {
@@ -11,4 +13,10 @@ html {
   list-style: none;
   box-sizing: content-box;
   text-decoration: none;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 15px;
 }

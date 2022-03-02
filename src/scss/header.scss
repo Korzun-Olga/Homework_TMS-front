@@ -1,0 +1,30 @@
+section {
+  &-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 7;
+  }
+  &-header-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0px;
+  }
+  &-header-navigation-logo {
+    font-family: Raleway;
+    font-size: 40px;
+    font-weight: 400;
+    color: $purple_logo;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  &-header-navigation-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: center;
+  }
+}
