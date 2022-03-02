@@ -1,30 +1,54 @@
-section {
-  &-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 7;
-  }
-  &-header-navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 0px;
-  }
-  &-header-navigation-logo {
-    font-family: Raleway;
-    font-size: 40px;
-    font-weight: 400;
-    color: $purple_logo;
-    text-transform: uppercase;
-    display: block;
-  }
+//тут задаем значения всей секции, позицию absolute потому что потом будем ее позиционировать относительно first_screen и надо ее поверх маски будет поместить
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 7;
+  background-color: aqua;
+  border-bottom: 2px solid $white;
+}
+//прописываем свойства для коробки
+.header-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0px;
+}
+span {
+  font-family: Raleway;
+  font-weight: 600;
+  font-size: $_30px;
+  text-transform: uppercase;
+  color: $purple_logo;
 
-  &-header-navigation-list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    justify-content: center;
+  &::after {
+    content: "BOX";
+    color: $purple_logo;
+    font-family: Raleway;
+    font-weight: 100;
+    font-size: $_30px;
   }
+}
+//тут мы работаем со списком
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  li {
+    a {
+      font-family: Raleway;
+      font-weight: 600;
+      font-size: 13px;
+      color: $white;
+      margin-left: 30px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+}
+
+.header-burger {
+  display: none;
 }

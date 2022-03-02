@@ -41,6 +41,16 @@ section-header-navigation-list {
           justify-content: center;
 }
 
+ul li a {
+  font-family: Raleway;
+  font-weight: 600;
+  font-size: 13px;
+  color: #ffffff;
+  margin-left: 30px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
 .first_screen {
   background-image: url("/img/img.jpg");
   margin: auto;
