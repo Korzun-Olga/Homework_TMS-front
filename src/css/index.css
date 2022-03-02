@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital@0;1&family=Raleway:wght@400;700;900&display=swap");
+html {
+  font-family: "Raleway", "Cardo", sans-serif;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  text-decoration: none;
+}

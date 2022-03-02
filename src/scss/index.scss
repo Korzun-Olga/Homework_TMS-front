@@ -1,0 +1,14 @@
+@import "./variables.scss";
+@import "./cdn.scss";
+@import "./mixins/card.scss";
+
+html {
+  font-family: "Raleway", "Cardo", sans-serif;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  box-sizing: content-box;
+  text-decoration: none;
+}
