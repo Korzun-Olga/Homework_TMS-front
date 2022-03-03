@@ -48,10 +48,15 @@ ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media (max-width: 768px) {
+  ul {
+    display: none;
+  }
+}
 ul li a {
   font-family: Raleway;
-  font-weight: 600;
-  font-size: 13px;
+  font-weight: 400;
+  font-size: 1.125rem;
   color: #ffffff;
   margin-left: 30px;
   text-transform: uppercase;
@@ -60,6 +65,26 @@ ul li a {
 
 .header-burger {
   display: none;
+  width: 80px;
+  height: 30px;
+  border-top: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+  position: relative;
+  cursor: pointer;
+}
+.header-burger::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 47%;
+}
+@media (max-width: 768px) {
+  .header-burger {
+    display: block;
+  }
 }
 
 .first_screen {
