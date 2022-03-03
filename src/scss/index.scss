@@ -3,10 +3,21 @@
 @import "./cdn.scss";
 @import "./header.scss";
 @import "./first_skreen.scss";
-
+@import "./properties.scss";
 html {
   font-family: "Raleway", "Cardo", sans-serif;
+  font-size: 16px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+  @media (max-width: 576px) {
+    font-size: 12px;
+  }
+  @media (max-width: 320px) {
+    font-size: 10px;
+  }
 }
+
 * {
   padding: 0px;
   margin: 0px;
@@ -19,10 +30,12 @@ html {
   max-width: 1170px;
   margin: auto;
   padding: 0 15px;
+  z-index: 5;
+  position: relative;
 }
 
-h1 {
-  font-family: Raleway;
-  font-size: $_64px;
-  text-transform: uppercase;
+section {
+  padding: 120px 0;
+  top: 0px;
+  left: 0px;
 }
