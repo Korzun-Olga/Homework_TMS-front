@@ -1,3 +1,74 @@
 .properties-row {
-  @include flex-box;
+  display: flex;
+  align-items: stretch; //задаем для того чтобы наполенние в карточке могло быть разным, а сами они оставались размером за наибольшей, чтобы контент в ряду всегда был на одной линии//
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+.properties-card {
+  width: 30%;
+  margin: 0px 10px 105px 10px;
+  display: flex;
+  flex-direction: column; //задаем колонку для того чтобы блок с текстом мог разъехаться с фактором жадности по оси y, если ряд то блок едет по оси х
+  .properties-content {
+    flex-grow: 1; //вот тут та волшебная фигня, фактор жадности из-за него будет растягиваться карточка, т.е. по высоте карточка будет одинаковая с той, в которой больше информации.
+  }
+  @media (max-width: 576px) {
+    width: 45%;
+    justify-content: space-around;
+  }
+  @media (max-width: 320px) {
+    width: 90%;
+  }
+}
+
+.properties-card:nth-child(4) {
+  margin-bottom: 0px;
+
+  //   @media (max-width: 576px) {
+  //     margin-bottom: 105px;
+  //   }
+}
+.properties-card:nth-child(5) {
+  margin-bottom: 0px;
+  //   @media (max-width: 320px) {
+  //     margin-bottom: 105px;
+  //   }
+  //   .properties-card:nth-child(6) {
+  //     margin-bottom: 0px;
+  //   }
+}
+.properties-card:nth-child(6) {
+  margin-bottom: 0px;
+}
+.fa-star,
+.fa-pen-to-square,
+.fa-circle-check,
+.fa-stack-overflow,
+.fa-teamspeak,
+.fa-medapps {
+  font-family: font Awesome 6 Free;
+  font-size: $_64px;
+  color: $red_active;
+  text-align: center;
+  display: block;
+  margin-bottom: 40px;
+  cursor: pointer;
+
+  &:hover {
+    color: $red_dark_active;
+  }
+}
+
+h2 {
+  font-family: Raleway;
+  font-weight: 900;
+  font-size: $_24px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 23px;
+}
+
+p {
+  text-align: center;
 }

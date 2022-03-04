@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cardo:ital@0;1&family=Raleway:wght@400;700;900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
 .header {
   padding: 0px;
   border-bottom: 2px solid #ffffff;
@@ -17,7 +19,6 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 25px 0px;
   border-bottom: 2px solid #ffffff;
 }
 
@@ -52,6 +53,10 @@ ul {
   ul {
     display: none;
   }
+}
+ul li {
+  border-bottom: 4px solid #ffffff;
+  line-height: 74px;
 }
 ul li a {
   font-family: Raleway;
@@ -151,12 +156,92 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.properties-card {
+  width: 30%;
+  margin: 0px 10px 105px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.properties-card .properties-content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+@media (max-width: 576px) {
+  .properties-card {
+    width: 45%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+@media (max-width: 320px) {
+  .properties-card {
+    width: 90%;
+  }
+}
+
+.properties-card:nth-child(4) {
+  margin-bottom: 0px;
+}
+
+.properties-card:nth-child(5) {
+  margin-bottom: 0px;
+}
+
+.properties-card:nth-child(6) {
+  margin-bottom: 0px;
+}
+
+.fa-star,
+.fa-pen-to-square,
+.fa-circle-check,
+.fa-stack-overflow,
+.fa-teamspeak,
+.fa-medapps {
+  font-family: font Awesome 6 Free;
+  font-size: 4rem;
+  color: #ff4343;
+  text-align: center;
+  display: block;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+.fa-star:hover,
+.fa-pen-to-square:hover,
+.fa-circle-check:hover,
+.fa-stack-overflow:hover,
+.fa-teamspeak:hover,
+.fa-medapps:hover {
+  color: #b90c0c;
+}
+
+h2 {
+  font-family: Raleway;
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 23px;
+}
+
+p {
+  text-align: center;
 }
 
 html {

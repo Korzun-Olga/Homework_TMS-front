@@ -10,7 +10,7 @@
   //прописываем свойства для коробки, сюда запихнула миксин флекс коробка, сентр, space-between
   .header-navigation {
     @include flex-box;
-    padding: 25px 0px; // пока убрала пэдинги делаю line height
+    // padding: 25px 0px; // пока убрала пэдинги делаю line height
     border-bottom: 2px solid $white;
   }
 }
@@ -40,8 +40,8 @@ ul {
 
   li {
     //тут я прописала line-height для того чтобы задать подчеркивание для каждого item по наведению
-    // border-bottom: 4px solid $white;
-    // line-height: 74px;
+    border-bottom: 4px solid $white;
+    line-height: 74px;
 
     a {
       font-family: Raleway;
