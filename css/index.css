@@ -28,6 +28,7 @@ span {
   font-size: 1.875rem;
   text-transform: uppercase;
   color: #656980;
+  line-height: 74px;
 }
 span::after {
   content: "BOX";
@@ -183,25 +184,50 @@ h1 {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
+@media (max-width: 767px) {
+  .properties-card {
+    width: 45%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 @media (max-width: 576px) {
   .properties-card {
     width: 45%;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 400px) {
   .properties-card {
     width: 90%;
   }
 }
 
+.header-card {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 .properties-card:nth-child(4) {
   margin-bottom: 0px;
+}
+@media (max-width: 767px) {
+  .properties-card:nth-child(4) {
+    margin-bottom: 105px;
+  }
 }
 
 .properties-card:nth-child(5) {
   margin-bottom: 0px;
+}
+@media (max-width: 400px) {
+  .properties-card:nth-child(5) {
+    margin-bottom: 105px;
+  }
 }
 
 .properties-card:nth-child(6) {
@@ -248,19 +274,24 @@ html {
   font-family: "Raleway", "Cardo", sans-serif;
   font-size: 16px;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   html {
     font-size: 14px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   html {
     font-size: 12px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 576px) {
   html {
     font-size: 10px;
+  }
+}
+@media (max-width: 320px) {
+  html {
+    font-size: 9px;
   }
 }
 
@@ -273,6 +304,12 @@ html {
   text-decoration: none;
 }
 
+section {
+  padding: 120px 0;
+  top: 0px;
+  left: 0px;
+}
+
 .container {
   max-width: 1170px;
   margin: auto;
@@ -280,9 +317,23 @@ html {
   z-index: 5;
   position: relative;
 }
-
-section {
-  padding: 120px 0;
-  top: 0px;
-  left: 0px;
+@media (max-width: 992px) {
+  .container {
+    width: 760px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    width: 570px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (max-width: 320px) {
+  .container {
+    width: 100%;
+  }
 }
