@@ -1,0 +1,88 @@
+.designers-row {
+  display: flex;
+  align-items: stretch; //задаем для того чтобы наполенние в карточке могло быть разным, а сами они оставались размером за наибольшей, чтобы контент в ряду всегда был на одной линии//
+  justify-content: space-between;
+  margin: 0 -15px;
+}
+
+.designers-card {
+  display: flex;
+  margin: 0 15px;
+  width: 25%;
+  flex-direction: column; //задаем колонку для того чтобы блок с текстом мог разъехаться с фактором жадности по оси y, если ряд то блок едет по оси х
+}
+
+.designers-photo {
+  width: 270px;
+  height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  // на медиа запросе надо уменьшить размер карточки
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+//карточке назначаем 100% размера от родителя, потому что по медиа запросу карточка будет уменьшаться, а родителю флекс и все по центру.
+h2.designers-name {
+  text-align: left;
+  text-transform: none;
+  margin-bottom: 5px;
+}
+// все остальные свойства прописаны в секции выше, properties
+
+.designers-occupation {
+  font-family: Raleway;
+  font-size: $_18px;
+  color: $red_active;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 17px;
+}
+
+.designers-content {
+  flex-grow: 1; //вот тут та волшебная фигня, фактор жадности из-за него будет растягиваться карточка, т.е. по высоте карточка будет одинаковая с той, в которой больше информации.
+}
+.designers-content p {
+  text-align: left;
+  margin-bottom: 37px;
+}
+
+.designers-row-network {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.network-1,
+.network-2,
+.network-3 {
+  width: 39px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $border-network;
+  margin-right: 4px;
+}
+
+.fa-facebook-f,
+.fa-twitter,
+.fa-linkedin {
+  font-family: font Awesome 6 Free;
+  color: $border-network;
+  font-size: $_18px;
+}
+.fa-facebook-f:hover {
+  color: $facebook;
+}
+.fa-twitter:hover {
+  color: $twitter;
+}
+
+.fa-linkedin:hover {
+  color: $linkedin;
+}

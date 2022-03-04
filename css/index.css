@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cardo:ital@0;1&family=Raleway:wght@400;700;900&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
 .header {
   padding: 0px;
   border-bottom: 2px solid #ffffff;
@@ -264,10 +263,134 @@ h2 {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 23px;
+  color: #2d3033;
 }
 
 p {
   text-align: center;
+  color: #6c7279;
+}
+
+.designers-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 -15px;
+}
+
+.designers-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 15px;
+  width: 25%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.designers-photo {
+  width: 270px;
+  height: 270px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+h2.designers-name {
+  text-align: left;
+  text-transform: none;
+  margin-bottom: 5px;
+}
+
+.designers-occupation {
+  font-family: Raleway;
+  font-size: 1.125rem;
+  color: #ff4343;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 17px;
+}
+
+.designers-content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.designers-content p {
+  text-align: left;
+  margin-bottom: 37px;
+}
+
+.designers-row-network {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.network-1,
+.network-2,
+.network-3 {
+  width: 39px;
+  height: 39px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #c6cbcd;
+  margin-right: 4px;
+}
+
+.fa-facebook-f,
+.fa-twitter,
+.fa-linkedin {
+  font-family: font Awesome 6 Free;
+  color: #c6cbcd;
+  font-size: 1.125rem;
+}
+
+.fa-facebook-f:hover {
+  color: #3b5998;
+}
+
+.fa-twitter:hover {
+  color: #00acee;
+}
+
+.fa-linkedin:hover {
+  color: #0e76a8;
 }
 
 html {
@@ -336,4 +459,10 @@ section {
   .container {
     width: 100%;
   }
+}
+
+p {
+  font-family: Raleway;
+  text-align: center;
+  color: #6c7279;
 }

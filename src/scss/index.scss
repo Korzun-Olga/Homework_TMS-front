@@ -4,6 +4,7 @@
 @import "./header.scss";
 @import "./main.scss";
 @import "./properties.scss";
+@import "./designers.scss";
 
 html {
   font-family: "Raleway", "Cardo", sans-serif;
@@ -56,3 +57,10 @@ section {
     width: 100%;
   }
 }
+
+p {
+  font-family: Raleway;
+  text-align: center;
+  color: $light_black;
+}
+//тут прописала р для всех во всем документе
