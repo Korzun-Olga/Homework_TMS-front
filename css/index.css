@@ -266,6 +266,31 @@ h2 {
   color: #2d3033;
 }
 
+.project-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project-card {
+  overflow: hidden;
+  padding: 0px, 0px, 58%, 0px;
+  border: 1px solid red;
+}
+
+img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
 section.designers {
   padding-top: 120px;
   padding-bottom: 60px;
