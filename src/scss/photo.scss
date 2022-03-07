@@ -1,0 +1,119 @@
+.container_photo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  align-items: stretch;
+  //ту прописываем медиазапрос для рядов, постепенно количество рядов будет увеличиваться, а колонок уменьшаться
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+  }
+
+  @media (max-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto auto;
+  }
+
+  @media (max-width: 400px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+  }
+}
+.grid-item {
+  padding: 0px 0px 58% 0px; //прописываем паддиги вместо высоты карточки, когда будет адаптив, карточка и фото будут уменьшаться не только по ширине пропорционально, но и повысоте, за счет падинга в процентах
+  overflow: hidden;
+  border: 1px solid $white;
+  position: relative; //при этом надо обязательно задать позиционирование для родителя и картинки
+  z-index: 3;
+
+  &:hover::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: $red_hover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4; // кладем маску и родителя на слои, маска сверху
+  }
+
+  &:active::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: $red_active;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+  }
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+//пропишем адаптив, на расширении 767 две последние карточки не показываются, а после 576 опять видны
+.grid-item-7 {
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (max-width: 576px) {
+    display: block;
+  }
+}
+.grid-item-8 {
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (max-width: 576px) {
+    display: block;
+  }
+}
+//прописываем внутренности карточки и кладем их на слой выше маски
+.content_photo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+//делаем текст невидимым, не отображаем его none
+.content_photo_title {
+  font-family: Raleway;
+  font-size: $_24px;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  display: none;
+}
+.content_photo_text {
+  font-family: Raleway;
+  font-size: $_18px;
+  color: $white;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+//при наведении на карточку начинают отображаться надписи display: block
+.content_photo:hover .content_photo_title {
+  display: block;
+}
+.content_photo:hover .content_photo_text {
+  display: block;
+}

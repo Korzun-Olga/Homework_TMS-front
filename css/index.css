@@ -241,7 +241,7 @@ h1 {
 .fa-medapps {
   font-family: font Awesome 6 Free;
   font-size: 4rem;
-  color: #ff4343;
+  color: rgba(255, 67, 67, 0.8);
   text-align: center;
   display: block;
   margin-bottom: 40px;
@@ -266,29 +266,279 @@ h2 {
   color: #2d3033;
 }
 
-.project-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.container_photo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
-.project-card {
+.container_photo > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.container_photo > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.container_photo > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.container_photo > *:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+}
+
+.container_photo > *:nth-child(5) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.container_photo > *:nth-child(6) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+
+.container_photo > *:nth-child(7) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+}
+
+.container_photo > *:nth-child(8) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+}
+@media (max-width: 767px) {
+  .container_photo {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: auto auto;
+    grid-template-rows: auto auto;
+  }
+  .container_photo > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .container_photo > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .container_photo > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .container_photo > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .container_photo > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .container_photo > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+}
+@media (max-width: 576px) {
+  .container_photo {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+  }
+  .container_photo > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .container_photo > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .container_photo > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .container_photo > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .container_photo > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .container_photo > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .container_photo > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .container_photo > *:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+}
+@media (max-width: 400px) {
+  .container_photo {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+    -ms-grid-rows: auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+  }
+  .container_photo > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .container_photo > *:nth-child(2) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .container_photo > *:nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .container_photo > *:nth-child(4) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .container_photo > *:nth-child(5) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .container_photo > *:nth-child(6) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .container_photo > *:nth-child(7) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .container_photo > *:nth-child(8) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+  }
+}
+
+.grid-item {
+  padding: 0px 0px 58% 0px;
   overflow: hidden;
-  padding: 0px, 0px, 58%, 0px;
-  border: 1px solid red;
+  border: 1px solid #ffffff;
+  position: relative;
+  z-index: 3;
+}
+.grid-item:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(231, 20, 20, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+.grid-item:active::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 67, 67, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
 }
 
-img {
+.grid-item img {
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 767px) {
+  .grid-item-7 {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .grid-item-7 {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .grid-item-8 {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .grid-item-8 {
+    display: block;
+  }
+}
+
+.content_photo {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.content_photo_title {
+  font-family: Raleway;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.content_photo_text {
+  font-family: Raleway;
+  font-size: 1.125rem;
+  color: #ffffff;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.content_photo:hover .content_photo_title {
+  display: block;
+}
+
+.content_photo:hover .content_photo_text {
+  display: block;
 }
 
 section.designers {
@@ -350,17 +600,14 @@ section.designers {
 }
 
 .designers-photo {
-  padding: 0px, 0px, 58%, 0px;
   margin-bottom: 30px;
   overflow: hidden;
+  position: relative;
 }
 
-img {
+.designers-photo img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  height: 100%;
 }
 
 h2.designers-name {
@@ -372,7 +619,7 @@ h2.designers-name {
 .designers-occupation {
   font-family: Raleway;
   font-size: 1.125rem;
-  color: #ff4343;
+  color: rgba(255, 67, 67, 0.8);
   display: block;
   text-transform: uppercase;
   font-weight: 400;
