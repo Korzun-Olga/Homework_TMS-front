@@ -30,11 +30,54 @@
   color: $white;
   margin: auto;
   display: block;
+
   &:active {
     background: $red_active;
   }
-
   @media (max-width: 576px) {
     width: 80%;
+  }
+}
+
+.download-button:hover {
+  animation-name: pulse;
+  animation-duration: 3000ms;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+@keyframes pulse {
+  0% {
+    transform: scaleX(1) scaleY(1);
+  }
+  10% {
+    transform: scaleX(0.85) scaleY(0.85);
+  }
+  20% {
+    transform: scaleX(1) scaleY(1);
+  }
+  30% {
+    transform: scaleX(0.85) scaleY(0.85);
+  }
+  40% {
+    transform: scaleX(1) scaleY(1);
+  }
+  50% {
+    transform: scaleX(0.85) scaleY(0.85);
+  }
+  60% {
+    transform: scaleX(1) scaleY(1);
+  }
+  70% {
+    transform: scaleX(0.85) scaleY(0.85);
+  }
+  80% {
+    transform: scaleX(1) scaleY(1);
+  }
+  90% {
+    transform: scaleX(0.85) scaleY(0.85);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
   }
 }

@@ -5,7 +5,10 @@
   background-size: cover;
   position: relative;
   z-index: 1;
-  padding: 200px 0px 120px; //чтобы отодвинуть от сайд-бара
+  min-height: 100vh;
+  padding: 0px;
+  // padding: 200px 0px 120px;
+  //чтобы отодвинуть от сайд-бара
 
   &::after {
     content: "";
@@ -19,11 +22,11 @@
     z-index: 2;
   }
 }
-// это должно поставить блок посередине если родителю задать min-height= 100vh
+#main-container {
+  transform: translate(0%, 50%);
+  padding: 0px;
+}
 
-// #main-container {
-//   transform: translate(0%, 50%);
-// }
 h1 {
   font-family: Raleway;
   font-size: $_64px;
