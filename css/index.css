@@ -901,6 +901,46 @@ h2.designers-name {
   }
 }
 
+.download-title {
+  text-align: center;
+  font-family: Raleway;
+  font-size: 1.875rem;
+  color: #000;
+  text-transform: capitalize;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.download-subtitle {
+  text-align: center;
+  font-family: Raleway;
+  font-size: 1.125rem;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.download-button {
+  font-family: Raleway;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  width: 370px;
+  height: 80px;
+  background: #ff4343;
+  cursor: pointer;
+  color: #ffffff;
+  margin: auto;
+  display: block;
+}
+@media (max-width: 576px) {
+  .download-button {
+    width: 100%;
+  }
+}
+
 html {
   font-family: "Raleway", "Cardo", sans-serif;
   font-size: 16px;
