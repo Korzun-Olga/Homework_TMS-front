@@ -30,6 +30,9 @@
   color: $white;
   margin: auto;
   display: block;
+  &:active {
+    background: $red_active;
+  }
 
   @media (max-width: 576px) {
     width: 80%;
