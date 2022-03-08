@@ -8,12 +8,10 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
   }
-
   @media (max-width: 576px) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto auto auto auto;
   }
-
   @media (max-width: 400px) {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto auto auto auto auto auto auto auto;
@@ -63,7 +61,6 @@
   @media (max-width: 767px) {
     display: none;
   }
-
   @media (max-width: 576px) {
     display: block;
   }
@@ -72,7 +69,6 @@
   @media (max-width: 767px) {
     display: none;
   }
-
   @media (max-width: 576px) {
     display: block;
   }

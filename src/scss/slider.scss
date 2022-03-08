@@ -1,0 +1,194 @@
+/* Слайдер */
+.slick-slider {
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+/* Ограничивающая оболочка */
+.slick-list {
+  jverflow: hidden;
+}
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+}
+/* Слайд */
+.slick-slide {
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+}
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+/* Слайд по центру */
+.slick-slide.slick-center {
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
+/* Стрелка */
+.slick-arrow {
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
+/* Точки (булиты) */
+.slick-dots {
+}
+.slick-dots li {
+}
+/* Активная точка */
+.slick-dots li.slick-active {
+}
+/* Элемент точки */
+.slick-dots li button {
+}
+.slider {
+  position: relative;
+}
+/*Конкретный слайдер*/
+// .slider .slick-arrow {
+//   position: absolute;
+//   top: 50%;
+//   z-index: 10;
+// }
+// .slider .slick-arrow.slick-prev {
+//   left: 0;
+// }
+// .slider .slick-arrow.slick-next {
+//   right: 0;
+// }
+
+//стилизуем кнопки внизу
+.slider .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider .slick-dots li {
+  list-style: none;
+  margin: 10px;
+}
+
+.slider .slick-dots button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background: $white;
+  border-radius: 50%;
+  border: 0.5px solid $slider;
+}
+.slider .slick-dots li.slick-active button {
+  background-color: $slider;
+}
+//стилизуем наш текст
+.quote {
+  font-family: Cardo;
+  font-size: $_36px;
+  color: $white;
+  font-style: italic;
+  font-weight: 400;
+  text-align: left;
+  max-width: 470px;
+  margin-bottom: 20px;
+
+  @media (max-width: 992px) {
+    font-size: 30px;
+    max-width: 370px;
+  }
+  @media (max-width: 767px) {
+    font-size: 22px;
+    max-width: 260px;
+  }
+  @media (max-width: 576px) {
+    font-size: 20px;
+    max-width: 350px;
+  }
+  @media (max-width: 400px) {
+    font-size: 18px;
+    max-width: 200px;
+  }
+}
+.author {
+  font-family: Raleway;
+  font-size: $_13px;
+  color: $white;
+  font-weight: 700;
+  text-transform: uppercase;
+  max-width: 470px;
+  text-align: left;
+  @media (max-width: 992px) {
+    font-size: 12px;
+    max-width: 370px;
+  }
+  @media (max-width: 767px) {
+    font-size: 11px;
+    max-width: 260px;
+  }
+  @media (max-width: 576px) {
+    font-size: 10px;
+    max-width: 350px;
+  }
+  @media (max-width: 400px) {
+    font-size: 9px;
+    max-width: 200px;
+  }
+}
+
+.slider {
+  min-width: 0; //это обязательно сделать потому что флекс-слайдер
+}
+.slider-item {
+  min-width: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: bottom;
+  //выстраиваем элементы в колонку на малом экране
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
+}
+//тут прописаны свойства для левой и правой части слайдера
+.slider_item_left,
+.slider_item_right {
+  min-width: 0; //это обязательно сделать потому что флекс-слайдер
+}
+.slider_item_left {
+  width: 50%;
+  @media (max-width: 576px) {
+    width: 100%;
+  }
+}
+.slider_item_left img {
+  width: 100%;
+  height: 100%;
+}
+.slider_item_right {
+  width: 50%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #5c3249;
+  @media (max-width: 576px) {
+    width: 100%;
+    height: 500px;
+  }
+  @media (max-width: 400px) {
+    font-size: 18px;
+    max-width: 200px;
+    height: 250px;
+  }
+}
