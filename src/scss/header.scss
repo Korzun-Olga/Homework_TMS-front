@@ -1,7 +1,6 @@
 //тут задаем значения всей секции, позицию absolute потому что потом будем ее позиционировать относительно first_screen и надо ее поверх маски будет поместить
 .header {
   padding: 0px;
-  border-bottom: 2px solid $white;
   position: absolute;
   top: 0;
   left: 0;
@@ -34,15 +33,18 @@ span {
 //тут мы работаем со списком, опять впихнула наш флекс-бокс
 ul {
   @include flex-box;
+  //тут я прописала line-height для того чтобы задать подчеркивание для каждого item по наведению
+  line-height: 74px;
   //прописала медиазапрос
   @media (max-width: 768px) {
     display: none;
   }
 
   li {
-    //тут я прописала line-height для того чтобы задать подчеркивание для каждого item по наведению
-    border-bottom: 4px solid $white;
-    line-height: 74px;
+    border-bottom: 4px solid transparent;
+    &:hover {
+      border-bottom: 4px solid $white;
+    }
 
     a {
       font-family: Raleway;
