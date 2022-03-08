@@ -5,8 +5,8 @@
   background-size: cover;
   position: relative;
   z-index: 1;
-  min-height: 100vh;
-  padding: 0px;
+  min-height: 100vh; //чтобы отображалось на весь экран
+  padding: 0px; // чтобы по ценру были внутренности работает в связке с  transform: translate
   // padding: 200px 0px 120px;
   //чтобы отодвинуть от сайд-бара
 
@@ -16,15 +16,15 @@
     height: 100%;
     display: block;
     background-color: $purple_mask;
-    position: absolute;
+    position: absolute; //маске прописываем позиционирование иначе не покажется
     top: 0px;
     left: 0px;
-    z-index: 2;
+    z-index: 2; //поднимаем ее выше чем родитель
   }
 }
 #main-container {
-  transform: translate(0%, 50%);
-  padding: 0px;
+  transform: translate(0%, 50%); // чтобы по ценру были внутренности
+  padding: 0px; //убираем падинги которые стоят в Index файле для контейнера
 }
 
 h1 {
