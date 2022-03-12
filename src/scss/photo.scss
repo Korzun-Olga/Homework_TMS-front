@@ -65,7 +65,7 @@ section.photo {
   left: 0;
 }
 //пропишем адаптив, на расширении 767 две последние карточки не показываются, а после 576 опять видны
-.grid-item-7 {
+.grid-item:nth-child(7) {
   @media (max-width: 767px) {
     display: none;
   }
@@ -73,7 +73,7 @@ section.photo {
     display: block;
   }
 }
-.grid-item-8 {
+.grid-item:nth-child(8) {
   @media (max-width: 767px) {
     display: none;
   }

@@ -61,6 +61,7 @@ h1 {
   display: block;
   border: none;
   box-shadow: 0.5px 0.5px 0 0.5px $dark_black, 5px 5px 20px 0 $black;
+  transition: 0.8s;
 
   &:active {
     background: $red_active;
