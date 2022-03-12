@@ -1,0 +1,72 @@
+.first-skreen {
+  background-image: url("/Homework_TMS-front/img/img.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh; //чтобы отображалось на весь экран
+  padding: 0px; // чтобы по ценру были внутренности работает в связке с  transform: translate
+  // padding: 200px 0px 120px;
+  //чтобы отодвинуть от сайд-бара
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: $purple_mask;
+    position: absolute; //маске прописываем позиционирование иначе не покажется
+    top: 0px;
+    left: 0px;
+    z-index: 2; //поднимаем ее выше чем родитель
+  }
+}
+#first-skreen-container {
+  transform: translate(0%, 50%); // чтобы по ценру были внутренности
+  padding: 0px; //убираем падинги которые стоят в Index файле для контейнера
+}
+
+h1 {
+  font-family: Raleway;
+  font-size: $_64px;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-align: center;
+  color: $white;
+  margin-bottom: 30px;
+}
+.first-skreen-subtitle {
+  margin-bottom: 80px;
+}
+.first-skreen-subtitle p {
+  font-family: Raleway;
+  font-size: $_24px;
+  font-weight: 400;
+  text-align: center;
+  color: $white;
+}
+.first-skreen-button {
+  font-family: Raleway;
+  font-size: $_24px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  width: 370px;
+  height: 80px;
+  background: $red_normal;
+  cursor: pointer;
+  color: $white;
+  margin: auto;
+  display: block;
+  border: none;
+  box-shadow: 0.5px 0.5px 0 0.5px $dark_black, 5px 5px 20px 0 $black;
+
+  &:active {
+    background: $red_active;
+  }
+
+  @media (max-width: 576px) {
+    width: 80%;
+  }
+}

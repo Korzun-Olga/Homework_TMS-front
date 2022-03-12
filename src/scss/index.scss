@@ -2,12 +2,13 @@
 @import "./variables.scss";
 @import "./cdn.scss";
 @import "./header.scss";
+@import "./first-skreen.scss";
 @import "./main.scss";
-@import "./properties.scss";
 @import "./photo.scss";
 @import "./designers.scss";
 @import "./slider.scss";
 @import "./download.scss";
+@import "./contacts.scss";
 @import "./footer.scss";
 html {
   font-family: "Raleway", "Cardo", sans-serif;
@@ -36,8 +37,6 @@ html {
 
 section {
   padding: 120px 0;
-  top: 0px;
-  left: 0px;
 }
 .container {
   max-width: 1170px;
@@ -54,10 +53,10 @@ section {
   }
 
   @media (max-width: 576px) {
-    width: 100%;
+    width: 96%;
   }
   @media (max-width: 320px) {
-    width: 100%;
+    width: 96%;
   }
 }
 

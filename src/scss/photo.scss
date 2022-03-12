@@ -1,8 +1,12 @@
+section.photo {
+  padding: 0px;
+}
 .container_photo {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto auto;
   align-items: stretch;
+
   //ту прописываем медиазапрос для рядов, постепенно количество рядов будет увеличиваться, а колонок уменьшаться
   @media (max-width: 767px) {
     grid-template-columns: repeat(3, 1fr);
@@ -17,12 +21,14 @@
     grid-template-rows: auto auto auto auto auto auto auto auto;
   }
 }
+
 .grid-item {
-  padding: 0px 0px 58% 0px; //прописываем паддиги вместо высоты карточки, когда будет адаптив, карточка и фото будут уменьшаться не только по ширине пропорционально, но и повысоте, за счет падинга в процентах
+  padding: 0px 0px 85% 0px; //прописываем паддиги вместо высоты карточки, когда будет адаптив, карточка и фото будут уменьшаться не только по ширине пропорционально, но и повысоте, за счет падинга в процентах
   overflow: hidden;
   border: 1px solid $white;
   position: relative; //при этом надо обязательно задать позиционирование для родителя и картинки
   z-index: 3;
+  transition: 0.8s;
 
   &:hover::before {
     content: "";
@@ -32,7 +38,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 4; // кладем маску и родителя на слои, маска сверху
+    z-index: 4;
+
+    // кладем маску и родителя на слои, маска сверху
   }
 
   &:active::before {
@@ -97,7 +105,7 @@
   margin-bottom: 20px;
   display: none;
 }
-.content_photo_text {
+.content_photo_text p {
   font-family: Raleway;
   font-size: $_18px;
   color: $white;
@@ -110,6 +118,6 @@
 .content_photo:hover .content_photo_title {
   display: block;
 }
-.content_photo:hover .content_photo_text {
+.content_photo:hover .content_photo_text p {
   display: block;
 }

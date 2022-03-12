@@ -1,68 +1,71 @@
-.main {
-  background-image: url("/img/img.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  z-index: 1;
-  min-height: 100vh; //чтобы отображалось на весь экран
-  padding: 0px; // чтобы по ценру были внутренности работает в связке с  transform: translate
-  // padding: 200px 0px 120px;
-  //чтобы отодвинуть от сайд-бара
-
-  &::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-color: $purple_mask;
-    position: absolute; //маске прописываем позиционирование иначе не покажется
-    top: 0px;
-    left: 0px;
-    z-index: 2; //поднимаем ее выше чем родитель
+.main-row {
+  display: flex;
+  align-items: stretch; //задаем для того чтобы наполенние в карточке могло быть разным, а сами они оставались размером за наибольшей, чтобы контент в ряду всегда был на одной линии//
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+.main-card {
+  width: 30%;
+  margin: 0px 10px 105px 10px;
+  display: flex;
+  flex-direction: column; //задаем колонку для того чтобы блок с текстом мог разъехаться с фактором жадности по оси y, если ряд то блок едет по оси х
+  .main-content {
+    flex-grow: 1; //вот тут та волшебная фигня, фактор жадности из-за него будет растягиваться карточка, т.е. по высоте карточка будет одинаковая с той, в которой больше информации.
   }
-}
-#main-container {
-  transform: translate(0%, 50%); // чтобы по ценру были внутренности
-  padding: 0px; //убираем падинги которые стоят в Index файле для контейнера
-}
-
-h1 {
-  font-family: Raleway;
-  font-size: $_64px;
-  text-transform: uppercase;
-  font-weight: 800;
-  text-align: center;
-  color: $white;
-  margin-bottom: 30px;
-}
-.main-subtitle {
-  font-family: Raleway;
-  font-size: $_24px;
-  font-weight: 400;
-  text-align: center;
-  color: $white;
-  margin-bottom: 80px;
-}
-.main-button {
-  font-family: Raleway;
-  font-size: $_24px;
-  font-weight: 600;
-  text-align: center;
-  text-transform: uppercase;
-  width: 370px;
-  height: 80px;
-  background: $red_normal;
-  cursor: pointer;
-  color: $white;
-  margin: auto;
-  display: block;
-
-  &:active {
-    background: $red_active;
+  @media (max-width: 767px) {
+    width: 45%;
+    justify-content: center;
   }
-
   @media (max-width: 576px) {
-    width: 80%;
+    width: 45%;
+    justify-content: center;
   }
+  @media (max-width: 400px) {
+    width: 90%;
+  }
+}
+
+.main-card:nth-child(4) {
+  margin-bottom: 0px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 105px;
+  }
+  //на ширине экрана 757px карточки выстраиваются по две, и для четвертой надо уже прописать отступ.
+}
+.main-card:nth-child(5) {
+  margin-bottom: 0px;
+  @media (max-width: 400px) {
+    margin-bottom: 105px;
+  }
+  //на ширине экрана 400px карточи выстраиваются в ряд и теперь пятой карточке тоже нужен отступ.
+}
+.main-card:nth-child(6) {
+  margin-bottom: 0px;
+}
+.main-icon {
+  margin-bottom: 40px;
+}
+.fa-star,
+.fa-pen-to-square,
+.fa-circle-check,
+.fa-stack-overflow,
+.fa-teamspeak,
+.fa-medapps {
+  font-family: font Awesome 6 Free;
+  font-size: $_64px;
+  color: $red_active;
+  text-align: center;
+  display: block;
+}
+
+h3 {
+  font-family: Raleway;
+  font-weight: 900;
+  font-size: $_24px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 23px;
+  color: $dark_black;
 }

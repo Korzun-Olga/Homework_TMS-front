@@ -8,7 +8,7 @@ section.designers {
   align-items: stretch; //задаем для того чтобы наполенние в карточке могло быть разным, а сами они оставались размером за наибольшей, чтобы контент в ряду всегда был на одной линии//
   justify-content: space-between;
   margin: 0 -15px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   @media (max-width: 767px) {
     justify-content: space-around;
     flex-wrap: wrap;
@@ -17,8 +17,9 @@ section.designers {
 
 .designers-card {
   display: flex;
-  margin: 0px 15px 60px 15px;
-  width: 25%;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 20%;
   flex-direction: column; //задаем колонку для того чтобы блок с текстом мог разъехаться с фактором жадности по оси y, если ряд то блок едет по оси х
   @media (max-width: 767px) {
     width: 40%;
@@ -32,6 +33,22 @@ section.designers {
   }
 }
 
+.designers-card:nth-child(1) {
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+}
+.designers-card:nth-child(2) {
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+}
+
+.designers-card:nth-child(3) {
+  @media (max-width: 576px) {
+    margin-bottom: 40px;
+  }
+}
 .designers-photo {
   margin-bottom: 30px;
   overflow: hidden;
@@ -44,23 +61,24 @@ section.designers {
   //тут просто даем задание дизайнеру сделать фото одного размера
 }
 
-h2.designers-name {
+h3.designers-name {
   text-align: left;
   text-transform: none;
   margin-bottom: 5px;
 }
 // все остальные свойства прописаны в секции выше, properties
-
-.designers-occupation {
+.designers-info {
+  margin-bottom: 17px;
+}
+span.designers-occupation {
   font-family: Raleway;
   font-size: $_18px;
   color: $red_active;
   display: block;
   text-transform: uppercase;
   font-weight: 400;
-  margin-bottom: 17px;
+  text-align: left;
 }
-
 .designers-content {
   flex-grow: 1; //вот тут та волшебная фигня, фактор жадности из-за него будет растягиваться карточка, т.е. по высоте карточка будет одинаковая с той, в которой больше информации.
 }
@@ -74,9 +92,7 @@ h2.designers-name {
   justify-content: flex-start;
   align-items: center;
 }
-.network-1,
-.network-2,
-.network-3 {
+.network-content {
   width: 39px;
   height: 39px;
   display: flex;
@@ -92,6 +108,7 @@ h2.designers-name {
   font-family: font Awesome 6 Free;
   color: $border-network;
   font-size: $_18px;
+  transition: 0.6s;
 }
 .fa-facebook-f:hover {
   color: $facebook;

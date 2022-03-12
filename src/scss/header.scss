@@ -1,5 +1,5 @@
 //тут задаем значения всей секции, позицию absolute потому что потом будем ее позиционировать относительно first_screen и надо ее поверх маски будет поместить
-.header {
+header {
   padding: 0px;
   position: absolute;
   top: 0;
@@ -9,11 +9,10 @@
   //прописываем свойства для коробки, сюда запихнула миксин флекс коробка, сентр, space-between
   .header-navigation {
     @include flex-box;
-    // padding: 25px 0px; // пока убрала пэдинги делаю line height
     border-bottom: 2px solid $white;
   }
 }
-span {
+span.header-navigation-logo {
   font-family: Raleway;
   font-weight: 600;
   font-size: $_30px;
@@ -51,27 +50,27 @@ ul {
       font-weight: 400;
       font-size: $_13px;
       color: $white;
-      margin-left: 30px;
       text-transform: uppercase;
       cursor: pointer;
+      padding: 0px 15px; //чтобы по центру поставить наши надписи
     }
   }
 }
 
 .header-burger {
   display: none;
-  width: 60px;
-  height: 30px;
-  border-top: 3px solid $white;
-  border-bottom: 3px solid $white;
+  width: 40px;
+  height: 20px;
+  border-top: 2px solid $white;
+  border-bottom: 2px solid $white;
   position: relative;
   cursor: pointer;
 
   &::after {
     content: "";
     display: block;
-    width: 100%;
-    height: 3px;
+    width: 100%; //размер от родительского элемента
+    height: 2px;
     background-color: $white;
     position: absolute;
     top: 47%;

@@ -1,0 +1,58 @@
+.contacts {
+  background-color: $footer_light;
+  padding: 0px;
+}
+.contacts-row {
+  padding: 70px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  @media (max-width: 576px) {
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+    padding: 34px 0px;
+  }
+}
+//задаем общие параметры для карточек футера
+.contacts-card {
+  margin: 0px 15px;
+  width: 30%;
+  @media (max-width: 576px) {
+    width: 90%;
+    margin-bottom: 25px;
+  }
+}
+//для заголовка третьего уровня делаем свой класс и задаем белый цвет
+.contacts-card h3 {
+  color: $white;
+  font-weight: 600;
+}
+
+.contacts-content p {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: $_18px;
+  color: $white;
+}
+//это контейнер для кнопок соцсетей
+.contacts_network {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  @media (max-width: 576px) {
+    justify-content: center;
+  }
+}
+//прописываем кнопки для соцсетей
+.contacts_network-content {
+  width: 39px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $border-network;
+  margin: 0px 10px;
+}
