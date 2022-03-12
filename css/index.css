@@ -725,7 +725,7 @@ span.designers-occupation {
 
 /* Ограничивающая оболочка */
 .slick-list {
-  jverflow: hidden;
+  overflow: hidden;
 }
 
 /* Лента слайдов */
@@ -916,7 +916,7 @@ span.designers-occupation {
 @media (max-width: 400px) {
   .slider_item_right {
     font-size: 18px;
-    max-width: 200px;
+    max-width: 100%;
     height: 250px;
   }
 }
